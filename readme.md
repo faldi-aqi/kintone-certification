@@ -6,7 +6,7 @@
 
 - Version 0.1 - Initial draft by Muhamad Rifaldi on 12-06-2024.
 - Version 0.2 - New Process Mangement by Muhamad Rifaldi on 20-06-2024.
-- Version 1.0 - Alpha Version by Muhamad Rifaldi on 12-06-2024.
+- Version 1.0 - Demo Version by Muhamad Rifaldi on 26-06-2024.
 
 ---
 
@@ -77,8 +77,8 @@ The Customer Order Management System consists of the Order Management App, Purch
 
 1. **Performance**:
 
-   - The app should handle up to 100 concurrent users.
-   - Excel parsing should complete within 5 seconds per file.
+   - The app should handle up to unlimited users, as per Kintone free trial capabilities.
+   - Excel parsing using the ExcelJS library should complete within less than 5 seconds per file.
 
 2. **Usability**:
    - User-friendly interface for uploading and managing files.
@@ -93,6 +93,15 @@ The Customer Order Management System consists of the Order Management App, Purch
 - **Description**: User uploads customer order Excel files, which are then converted into purchase order records.
 - **Preconditions**: User has logged in and accessed the Order Management App, and the customer order has a unique order number.
 - **Postconditions**: New purchase order records are created, the status is updated to "PO Received", and the record is assigned to a purchasing department member with the best expertise and least workload.
+
+---
+
+**Use Case 2**: Advance Process Management and Receive Notifications
+
+- **Actor**: Purchasing Department Member
+- **Description**: The purchasing department member advances the process management stages. When a process is advanced, the system marks the actual date, calculates the days spent between processes, and notifies the member of upcoming deadlines.
+- **Preconditions**: The purchasing department member has been assigned a purchase order record.
+- **Postconditions**: The actual date is recorded, the days spent between processes are calculated and updated, and the member receives email notifications one day before the deadline at 8 AM.
 
 ---
 
