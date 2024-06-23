@@ -55,23 +55,24 @@ The Customer Order Management System consists of the Order Management App, Purch
    - Each attachment generates a new record in the Purchase Order App.
    - Fields in the Purchase Order App are populated based on the Excel data.
 
-2. **Update Purchase Order Status**:
-
-   - Status changes to "PO Received" upon record creation.
-
-3. **Intelligently Auto-assign Tasks**:
+2. **Intelligently Auto-assign Tasks**:
 
    - Assign tasks to the purchasing department member with the least workload and highest expertise.
    - Based on data from the Purchasing Department App.
 
-4. **Calculate Process Dates**:
+3. **Update Purchase Order Status & Auto Calculate Deadline Dates**:
 
+   - Status changes to "PO Received" upon record creation.
    - Automatically calculate deadline dates excluding weekends.
    - PO Received (creation date), In Progress (2 days), Awaiting Shipment (3 days), Resolved (1 day).
    - Update dates and days spent between processes as they advance.
 
-5. **Set Reminders**:
+4. **Auto Reminders**:
+
    - Send reminders at 8 AM one day before the deadline.
+
+5. **Visual Aids**:
+   - ON PROGRESS (Displaying Performance Measurement Charts)
 
 **Non-functional Requirements**:
 
