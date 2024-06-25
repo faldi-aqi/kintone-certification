@@ -1,11 +1,11 @@
-# Customer Order Management System With Kintone Document
+# Customer Order Management System With Kintone
 
 **Title**: Customer Order Management System With Kintone
 
 **Revision History**:
 
 - Version 0.1 - Initial draft by Muhamad Rifaldi on 12-06-2024.
-- Version 0.2 - New Process Mangement by Muhamad Rifaldi on 20-06-2024.
+- Version 0.2 - New Process Management by Muhamad Rifaldi on 20-06-2024.
 - Version 1.0 - Demo Version by Muhamad Rifaldi on 26-06-2024.
 
 ---
@@ -47,18 +47,25 @@ The Customer Order Management System consists of the Order Management App, Purch
 
 ## Specific Requirements
 
-**Functional Requirements**:
+### Functional Requirements
 
 1. **Convert Customer Order Excel Files to Purchase Order Records**:
 
-   - Multiple Excel attachments can be uploaded.
-   - Each attachment generates a new record in the Purchase Order App.
-   - Fields in the Purchase Order App are populated based on the Excel data.
+   - **Upload and Conversion**:
+     - Users can upload multiple Excel attachments.
+     - Each attachment is processed to generate a new record in the Purchase Order App.
+     - Specific fields in the Purchase Order App are populated based on the Excel data, including PO number, customer details, order items, and quantities.
+   - **Validation**:
+     - The system validates the Excel file format and data integrity before processing.
+     - Duplicate PO numbers are flagged, and the user is notified to resolve the issue.
+   - **Error Handling**:
+     - If an error occurs during conversion, the system logs the error and notifies the user with details on how to correct the issue.
 
 2. **Intelligently Auto-assign Tasks**:
 
    - Assign tasks to the purchasing department member with the least workload and highest expertise.
-   - Based on data from the Purchasing Department App.
+   - Expertise criteria based on number of completed orders, seniority, and specific skills.
+   - Data sourced from the Purchasing Department App.
 
 3. **Update Purchase Order Status & Auto Calculate Deadline Dates**:
 
@@ -72,9 +79,10 @@ The Customer Order Management System consists of the Order Management App, Purch
    - Send reminders at 8 AM one day before the deadline.
 
 5. **Visual Aids**:
+
    - ON PROGRESS (Displaying Performance Measurement Charts)
 
-**Non-functional Requirements**:
+### Non-functional Requirements
 
 1. **Performance**:
 
@@ -82,22 +90,21 @@ The Customer Order Management System consists of the Order Management App, Purch
    - Excel parsing using the ExcelJS library should complete within less than 5 seconds per file.
 
 2. **Usability**:
+
    - User-friendly interface for uploading and managing files.
 
 ---
 
 ## Use Cases
 
-**Use Case 1**: Convert and Upload Customer Order Excel Files
+### Use Case 1: Convert and Upload Customer Order Excel Files
 
 - **Actor**: User
 - **Description**: User uploads customer order Excel files, which are then converted into purchase order records.
 - **Preconditions**: User has logged in and accessed the Order Management App, and the customer order has a unique order number.
 - **Postconditions**: New purchase order records are created, the status is updated to "PO Received", and the record is assigned to a purchasing department member with the best expertise and least workload.
 
----
-
-**Use Case 2**: Advance Process Management and Receive Notifications
+### Use Case 2: Advance Process Management and Receive Notifications
 
 - **Actor**: Purchasing Department Member
 - **Description**: The purchasing department member advances the process management stages. When a process is advanced, the system marks the actual date, calculates the days spent between processes, and notifies the member of upcoming deadlines.
@@ -112,12 +119,6 @@ The Customer Order Management System consists of the Order Management App, Purch
 
 - Client-server architecture using Kintone platform APIs.
 - Excel parsing module integrated with Kintone using custom JavaScript code for record creation and status updates.
-
----
-
-### Flowchart
-
-Here is a flowchart illustrating the workflow of the Customer Order Management System:
 
 ---
 
