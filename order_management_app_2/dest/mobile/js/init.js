@@ -3,7 +3,7 @@
 const init = {
   app: {
     thisApp: {
-      id: kintone.app.getId(),
+      id: kintone.mobile.app.getId(),
       token: '5FhnNoZ848ojs1ZqxRFw6ISG5OVdqW8ZrFgVEsrT',
       fieldCode: {
         status: 'Status',
@@ -26,11 +26,11 @@ const init = {
         updatedBy: 'Updated_by',
       },
       event: {
-        indexShow: () => ['app.record.index.show'],
-        createEditShow: () => ['app.record.create.show', 'app.record.edit.show'],
-        detailShow: () => [`app.record.detail.show`],
-        submit: () => [`app.record.create.submit`, `app.record.edit.submit`],
-        submitSuccess: () => [`app.record.create.submit.success`, `app.record.edit.submit.success`],
+        indexShow: () => ['mobile.app.record.index.show'],
+        createEditShow: () => ['mobile.app.record.create.show', 'mobile.app.record.edit.show'],
+        detailShow: () => [`mobile.app.record.detail.show`],
+        submit: () => [`mobile.app.record.create.submit`, `mobile.app.record.edit.submit`],
+        submitSuccess: () => [`mobile.app.record.create.submit.success`, `mobile.app.record.edit.submit.success`],
       },
     },
     purchaseOrderApp: {

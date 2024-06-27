@@ -73,6 +73,8 @@ const functions = (({app, lib, globalVars}) => {
           return false;
         }
 
+        console.log(tempPoObj, 'ininiini');
+
         const customerInfo = {
           name: excelData[6][0].split(/\r?\n/)[0],
           company: excelData[6][0].split(/\r?\n/)[1],

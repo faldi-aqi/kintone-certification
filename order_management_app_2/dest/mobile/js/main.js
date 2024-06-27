@@ -3,10 +3,9 @@
 
   kintone.events.on(thisApp.event.detailShow(), async (e) => {
     const record = e.record;
-    kintone.app.record.setFieldShown('uploaded', false);
+    kintone.mobile.app.record.setFieldShown('uploaded', false);
 
-    // const targetElement = $('.gaia-argoui-app-toolbar-statusmenu');
-    const targetElement = kintone.app.record.getHeaderMenuSpaceElement();
+    const targetElement = kintone.mobile.app.getHeaderSpaceElement();
 
     // put the button on the target element
     if (targetElement && record.uploaded.value === 'false') {
@@ -38,7 +37,7 @@
   });
 
   kintone.events.on(thisApp.event.createEditShow(), async (e) => {
-    kintone.app.record.setFieldShown('uploaded', false);
+    kintone.mobile.app.record.setFieldShown('uploaded', false);
 
     return e;
   });

@@ -12,6 +12,7 @@
       "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js",
       "https://js.kintone.com/datatables/v1.10.20/js/jquery.dataTables.min.js",
       "https://unpkg.com/kintone-ui-component/umd/kuc.min.js",
+      "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js",
       "dest/desktop/js/init.js",
       "dest/desktop/js/functions.js",
       "dest/desktop/js/main.js"
@@ -19,7 +20,8 @@
     "css": [
       "https://js.kintone.com/sweetalert2/v9.10.7/sweetalert2.min.css",
       "https://js.kintone.com/jqueryui/1.13.2/themes/smoothness/jquery-ui.css",
-      "https://js.kintone.com/datatables/v1.10.20/css/jquery.dataTables.min.css"
+      "https://js.kintone.com/datatables/v1.10.20/css/jquery.dataTables.min.css",
+      "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     ]
   },
   "mobile": {
@@ -30,13 +32,19 @@
       "https://js.kintone.com/luxon/2.0.1/luxon.min.js",
       "https://js.kintone.com/jqueryui/1.13.2/jquery-ui.min.js",
       "https://unpkg.com/@kintone/rest-api-client@latest/umd/KintoneRestAPIClient.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js",
       "https://js.kintone.com/datatables/v1.10.20/js/jquery.dataTables.min.js",
-      "https://unpkg.com/kintone-ui-component/umd/kuc.min.js"
+      "https://unpkg.com/kintone-ui-component/umd/kuc.min.js",
+      "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js",
+      "dest/mobile/js/init.js",
+      "dest/mobile/js/functions.js",
+      "dest/mobile/js/main.js"
     ],
     "css": [
       "https://js.kintone.com/sweetalert2/v9.10.7/sweetalert2.min.css",
       "https://js.kintone.com/jqueryui/1.13.2/themes/smoothness/jquery-ui.css",
-      "https://js.kintone.com/datatables/v1.10.20/css/jquery.dataTables.min.css"
+      "https://js.kintone.com/datatables/v1.10.20/css/jquery.dataTables.min.css",
+      "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     ]
   }
 }
