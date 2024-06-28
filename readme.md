@@ -57,11 +57,15 @@ The Customer Order Management System consists of the Order Management App, Purch
    - Fields in the Purchase Order App are populated based on the Excel data.
    - Validation ensures attachments are in the predetermined format and do not duplicate existing PO numbers.
 
+   ![Upload Excel to Record](screenshots/upload-into-po.png)
+
 2. **Intelligently Recommend Assignee**:
 
    - Button to assign tasks to the purchasing department member with the least workload and highest expertise.
    - Based on data from the Purchasing Department App.
    - Users can manually override the auto-assignment by selecting from a dropdown list.
+
+   ![Assignee Suggestion](screenshots/autosuggest-assignee.png)
 
 3. **Update Purchase Order Status & Auto Calculate Deadline Dates**:
 
@@ -70,6 +74,8 @@ The Customer Order Management System consists of the Order Management App, Purch
    - PO Received (creation date), In Progress (2 days), Awaiting Shipment (3 days), Resolved (1 day).
    - Update dates and days spent between processes as they advance.
    - Workload of the assignee is adjusted accordingly when processes are resolved.
+
+     ![Auto Deadline](screenshots/auto-deadline.png)
 
 4. **Auto Reminders**:
 
@@ -103,8 +109,6 @@ The Customer Order Management System consists of the Order Management App, Purch
 - **Preconditions**: User has logged in and accessed the Order Management App, and the customer order has a unique order number.
 - **Postconditions**: New purchase order records are created when the button is pressed.
 
-![Upload Excel to Record](screenshots/upload-into-po.png)
-
 ---
 
 **Use Case 2**: Advance Process Management and Receive Notifications
@@ -113,10 +117,6 @@ The Customer Order Management System consists of the Order Management App, Purch
 - **Description**: The purchasing department member advances the process management stages. When a process is advanced, the system marks the actual date, calculates the days spent between processes, and notifies the member of upcoming deadlines.
 - **Preconditions**: The purchasing department member has been assigned a purchase order record.
 - **Postconditions**: The actual date is recorded, the days spent between processes are calculated and updated, and the member receives email notifications one day before the deadline at 8 AM.
-
-  ![Assignee Suggestion](screenshots/autosuggest-assignee.png)
-
-  ![Auto Deadline](screenshots/auto-deadline.png)
 
 ---
 
