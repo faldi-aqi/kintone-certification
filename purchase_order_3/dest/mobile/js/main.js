@@ -4,7 +4,6 @@
   kintone.events.on(thisApp.event.createEditShow(), (e) => {
     console.log({e});
 
-    console.log('heeheheheheheh');
 
     return e;
   });

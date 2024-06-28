@@ -235,7 +235,7 @@ const functions = (({app, lib, globalVars}) => {
                     const updateDateDeadline = async () => {
                       const todayDate = lib.dt.now().toISODate(); // Get today's date in yyyy-mm-dd format
 
-                      // Calculate deadlines based on today's date
+                      // Calculate deadlines based on today date
                       const {receivedPoDate, deadlineInProgressDate, deadlineAwaitingShipmentDate, deadlineResolvedDate} =
                         calculateDeadlines(todayDate);
                       record.PO_Received_Date.value = receivedPoDate;

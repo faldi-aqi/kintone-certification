@@ -26,7 +26,6 @@
         event.preventDefault();
 
         try {
-          // validate here
           await functions.convertExcelToRecord(e);
         } catch (error) {
           functions.showError(error);

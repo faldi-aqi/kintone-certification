@@ -51,7 +51,6 @@ const functions = (({app, lib, globalVars}) => {
 
       // Process each table
       for (const attachment of attachments) {
-        // const tableAttachment = table.value.Excel_Attachment.value[0]; // change to this index/item attachemnt
         const excelData = await functions.fetchAndParseExcel(attachment.fileKey);
 
         // validation for format

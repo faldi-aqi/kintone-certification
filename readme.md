@@ -75,6 +75,13 @@ The Customer Order Management System consists of the Order Management App, Purch
 
    - Send reminders at 8 AM one day before the deadline.
 
+5. **Visual Aids**:
+
+   - Displaying Performance Measurement Charts
+
+   ![Bar Chart](screenshots/bar-chart.png)
+   ![Pie Chart](screenshots/pie-chart.png)
+
 **Non-functional Requirements**:
 
 1. **Performance**:
@@ -96,6 +103,8 @@ The Customer Order Management System consists of the Order Management App, Purch
 - **Preconditions**: User has logged in and accessed the Order Management App, and the customer order has a unique order number.
 - **Postconditions**: New purchase order records are created when the button is pressed.
 
+![Upload Excel to Record](screenshots/upload-into-po.png)
+
 ---
 
 **Use Case 2**: Advance Process Management and Receive Notifications
@@ -104,6 +113,10 @@ The Customer Order Management System consists of the Order Management App, Purch
 - **Description**: The purchasing department member advances the process management stages. When a process is advanced, the system marks the actual date, calculates the days spent between processes, and notifies the member of upcoming deadlines.
 - **Preconditions**: The purchasing department member has been assigned a purchase order record.
 - **Postconditions**: The actual date is recorded, the days spent between processes are calculated and updated, and the member receives email notifications one day before the deadline at 8 AM.
+
+  ![Assignee Suggestion](screenshots/autosuggest-assignee.png)
+
+  ![Auto Deadline](screenshots/auto-deadline.png)
 
 ---
 
