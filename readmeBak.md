@@ -5,9 +5,8 @@
 **Revision History**:
 
 - Version 0.1 - Initial draft by Muhamad Rifaldi on 12-06-2024.
-- Version 0.2 - New Process Management by Muhamad Rifaldi on 20-06-2024.
-- Version 0.5 - Revamp the whole auto recommend assignee, add validation to excel files on 27-06-2024
-- Version 1.0 - Demo Version by Muhamad Rifaldi on 28-06-2024.
+- Version 0.2 - New Process Mangement by Muhamad Rifaldi on 20-06-2024.
+- Version 1.0 - Demo Version by Muhamad Rifaldi on 26-06-2024.
 
 ---
 
@@ -17,7 +16,7 @@
 This document outlines the specifications for a Customer Order Management System designed to convert Excel files into purchase order records and efficiently manage the workflow of these orders.
 
 **Scope**:
-This document encompasses the requirements for converting customer order Excel spreadsheets into purchase order records within Kintone, updating purchase order statuses, implementing intelligent auto-recommend assignee based on expertise and workload, automatically calculating process date deadlines, displaying performance measurement charts, and ensuring timely completion with deadline reminder notifications.
+This document encompasses the requirements for converting customer order Excel spreadsheets into purchase order records within Kintone, updating purchase order statuses, implementing intelligent auto-assignment based on expertise and workload, automatically calculating process date deadlines, displaying performance measurement charts, and ensuring timely completion with deadline reminder notifications.
 
 ---
 
@@ -29,7 +28,7 @@ The Customer Order Management System consists of the Order Management App, Purch
 **Product Functions**:
 
 - Convert and read customer order Excel spreadsheets into purchase order records.
-- Update purchase order statuses with intelligent assignee recommendation based on workload and expertise.
+- Update purchase order statuses with intelligent auto-assignment based on workload and expertise.
 - Automatically calculate each process deadline, intelligently excluding weekends.
 - Send reminders for approaching deadlines to assignees.
 
@@ -53,27 +52,27 @@ The Customer Order Management System consists of the Order Management App, Purch
 1. **Convert Customer Order Excel Files to Purchase Order Records**:
 
    - Multiple Excel attachments can be uploaded.
-   - Each attachment generates a new record in the Purchase Order App when the upload button is pressed on the detail page.
+   - Each attachment generates a new record in the Purchase Order App.
    - Fields in the Purchase Order App are populated based on the Excel data.
-   - Validation ensures attachments are in the predetermined format and do not duplicate existing PO numbers.
 
-2. **Intelligently Recommend Assignee**:
+2. **Intelligently Auto-assign Tasks**:
 
-   - Button to assign tasks to the purchasing department member with the least workload and highest expertise.
+   - Assign tasks to the purchasing department member with the least workload and highest expertise.
    - Based on data from the Purchasing Department App.
-   - Users can manually override the auto-assignment by selecting from a dropdown list.
 
 3. **Update Purchase Order Status & Auto Calculate Deadline Dates**:
 
-   - Status changes to "PO Received" when the custom assign button is pressed.
+   - Status changes to "PO Received" upon record creation.
    - Automatically calculate deadline dates excluding weekends.
    - PO Received (creation date), In Progress (2 days), Awaiting Shipment (3 days), Resolved (1 day).
    - Update dates and days spent between processes as they advance.
-   - Workload of the assignee is adjusted accordingly when processes are resolved.
 
 4. **Auto Reminders**:
 
    - Send reminders at 8 AM one day before the deadline.
+
+5. **Visual Aids**:
+   - ON PROGRESS (Displaying Performance Measurement Charts)
 
 **Non-functional Requirements**:
 
@@ -92,9 +91,9 @@ The Customer Order Management System consists of the Order Management App, Purch
 **Use Case 1**: Convert and Upload Customer Order Excel Files
 
 - **Actor**: User
-- **Description**: User uploads customer order Excel files. After submission, the button to upload the data into the purchase order App record appears on the detail page.
+- **Description**: User uploads customer order Excel files, which are then converted into purchase order records.
 - **Preconditions**: User has logged in and accessed the Order Management App, and the customer order has a unique order number.
-- **Postconditions**: New purchase order records are created when the button is pressed.
+- **Postconditions**: New purchase order records are created, the status is updated to "PO Received", and the record is assigned to a purchasing department member with the best expertise and least workload.
 
 ---
 
@@ -116,11 +115,11 @@ The Customer Order Management System consists of the Order Management App, Purch
 
 ---
 
-<!-- ### Flowchart
+### Flowchart
 
 Here is a flowchart illustrating the workflow of the Customer Order Management System:
 
---- -->
+---
 
 ## Constraints
 
@@ -144,3 +143,5 @@ Here is a flowchart illustrating the workflow of the Customer Order Management S
 **Related Documents**:
 
 - Kintone API Documentation
+
+---
