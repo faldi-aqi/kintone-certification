@@ -9,6 +9,8 @@
 - Version 0.5 - Revamp the whole auto recommend assignee, add validation to excel files on 27-06-2024
 - Version 1.0 - Demo Version by Muhamad Rifaldi on 28-06-2024.
 
+**Note**: Please open in preview mode (if using VsCode) to see the attached images
+
 ---
 
 ## Introduction
